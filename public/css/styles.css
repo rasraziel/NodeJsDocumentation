@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html, body {
+  font-family: 'Roboto', sans-serif!important;
+  margin: 0;
+  height: 100%;
+}
+
+.pr{
+  height:100%;
+  width:100%;
+}
+ 
+ /* Remove the navbar's default margin-bottom and rounded borders */ 
+ .navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 450px}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  padding-top: 20px;
+  background-color: #f1f1f1;
+  height: 100%;
+}
+
+/* Set black background color, white text and some padding */
+footer.navbar {
+    color : gray;
+    font-size: 1.6rem;
+    background-color:black;
+    position: fixed;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer li{
+  list-style-type: none;
+  display:inline;
+  margin-left: 5%;
+}
+
+footer li img{
+  height: 2%;
+  width: 2%;
+}
+
+.logo{
+  height: 120%;
+  width: 40%;
+}
+
+.node-logo{
+  border-radius: 50%;
+  height:20rem;
+  width:20rem;
+}
+
+.info-text{
+  margin-bottom: 5rem;
+  font-size: 2rem;
+}
+
+.navbar-inverse .navbar-nav>li.active>a,
+.navbar-inverse .navbar-nav>li.active>a:hover{
+  background-color: crimson;
+}
