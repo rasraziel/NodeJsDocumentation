@@ -12,34 +12,12 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="./scripts/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js" data-deferred="1"></script>
         
     </head>
       <body>
-          <nav class="navbar navbar-inverse">
-             <div class="container-fluid">
-                 <div class="navbar-header">
-                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                     <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>                        
-          </button>
-          <a class="navbar-brand" href="/"><img class="logo" src="./images/logo_eye.png"></img></a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="/getting-started">Getting Started</a></li>
-            <li><a href="/js">Javascript</a></li>
-            <li><a href="/node-modules">Node Modules</a></li>
-            <li><a href="/rest-api">REST API</a></li>
-            <li><a href="/express">Express</a></li>
-            <li><a href="#">Reserved</a></li>
-            <li><a href="#">Reserved</a></li>
-            <li><a href="#">Reserved</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+          <my-navbar></my-navbar>
       
     <div class="container-fluid text-center">    
       <div class="row content">
@@ -54,29 +32,22 @@
           <p><a href="#">Link</a></p>
           <p><a href="#">Link</a></p>
           <p><a href="#">Link</a></p>
-          <p><a href="#">Link</a></p>
+          <p><a  href="#">Link</a></p>
         </div>
         <div class="col-sm-8 text-left info-text"> 
           <h1>Welcome to the NodeJs documentation page</h1>
           <p>This is a website documenting everything we have learned so far in the NodeJs elective of the 4th semester at KEA.</p>
           <hr>
           <img class="node-logo" src="./images/node.png"></img>
+          <canvas class="background"></canvas>
           <hr>
           <p>Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the user's web browser. Consequently, Node.js represents a "JavaScript everywhere" paradigm, unifying web-application development around a single programming language, rather than different languages for server-side and client-side scripts.</p>
-          
+        
         </div>
       </div>
     </div>
     
-    <footer class="navbar navbar-expand-sm container-fluid text-center">
-            <li class="list-inline-item footer-copyright text-center py-1" ><img src="./images/email.jpg"></img>kea@kea.dk</li>
-            <li class="list-inline-item footer-copyright text-center py-1" ><img src="./images/phone.png"></img> +45 46460000</li>
-            <li class="list-inline-item footer-copyright text-center py-1" > CVR: 31656206</li>
-            <li class="list-inline-item footer-copyright text-center py-1" ><img src="./images/address.png"></img> Guldbergsgade 29N, 2200 København N</li>
-            <li class="list-inline-item footer-copyright text-center py-1" >© 2021 Copyright:
-                <a className="social-icon text-xs-center" target="_blank" href="https://kea.dk/"> kea.dk</a>
-            </li>
-    </footer>
-    
+      <my-footer></my-footer>
+      
     </body>
 </html>
