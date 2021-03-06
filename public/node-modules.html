@@ -16,7 +16,104 @@
     </head>
     <body>
       <my-navbar></my-navbar>
+      <div class="container-fluid text-center">    
+        <div class="row content">
+          <div class="col-sm-2 sidenav">
+            <p><a href="https://nodejs.org/en/download/">Get Node</a></p>
+            <p><a href="https://code.visualstudio.com/">Get VSCode</a></p>
+          </div>
+          <div class="col-sm-8 text-left info-text"> 
     <h1>Node Modules</h1>
+    <hr>
+    <div class="paragraphs">
+      <div class="row">
+        <div class="span4">
+          <div class="clearfix content-heading">
+              <h2>package.json</h2>
+              <img class="pull-left" src="images/package-json.png" height="100px"/>
+              <p>All npm packages contain a file, usually in the project root, called package.json - this file holds various metadata relevant to the project. 
+                This file is used to give information to npm that allows it to identify the project as well as handle the project's dependencies. 
+                It can also contain other metadata such as a project description, the version of the project in a particular distribution, license information,
+                 even configuration data - all of which can be vital to both npm and to the end users of the package. 
+                 The package.json file is normally located at the root directory of a Node.js project.
+              </p>
+              <pre>
+                {
+                  "name" : "underscore",
+                  "description" : "JavaScript's functional programming helper library.",
+                  "homepage" : "http://documentcloud.github.com/underscore/",
+                  "keywords" : ["util", "functional", "server", "client", "browser"],
+                  "author" : "Jeremy Ashkenas <jeremy@documentcloud.org>",
+                  "contributors" : [],
+                  "dependencies" : [],
+                  "repository" : {"type": "git", "url": "git://github.com/documentcloud/underscore.git"},
+                  "main" : "underscore.js",
+                  "version" : "1.1.6"
+                }
+              </pre>
+              <img class="pull-left" src="images/modules.png" height="300px"/>
+              <p>When creating a new Node project, the first thing we need to do is create a package.json 
+                file with an empty JSON object <code>{ }</code> inside. The dependencies field is used to list all the 
+                dependencies of your project that are available on npm. When someone installs your project through npm, 
+                all the dependencies listed will be installed as well. Additionally, if someone runs <code>npm install</code> in the 
+                root directory of your project, it will install all the dependencies to ./node_modules.
+                We can manually write the dependencies into our package.json file:
+              </p>
+                <pre>
+                  {
+                    "dependencies": {
+                      "express": "^4.17.1",
+                      "nodemon": "^2.0.7"
+                    }
+                  }
+                </pre>
+                <img class="pull-right" src="images/semver.png" height="300px"/>
+                <p>Packages in npm follow Semantic Versioning, also known as “semver”. 
+                  When you install a new package it will be added to your package.json with a semver version range.
+                  These versions are broken down into <code>major.minor.patch</code> and looks like one of these: 
+                  3.14.1, 0.42.0, 2.7.18. 
+                  Each part of the version gets incremented at various times:
+                  <li>Increment major when you make a breaking or incompatible change to the API of a package.</li>
+                  <li>Increment minor when you add new functionality while staying backwards-compatible.</li>
+                  <li>Increment patch when you make bug fixes while staying backwards-compatible.</li></p>
+                <p>After we can run <code>npm install</code> on the terminal which will install all the dependencies to ./node_modules, 
+                  or we can simply have a package.json file with an empty JSON object <code>{ }</code> inside and 
+                  use <code>npm install &ltpackage_name&gt</code> in the terminal which will install the latest version of the package ./node_modules 
+                  and also write that dependency in the package.json file. Example:
+                  <pre>npm install express</pre>
+                <p>It is also possible to add a "devDependencies" field to your package.json - these are dependencies 
+                  not required for normal operation, but required/recommended if you want to patch or modify the project. 
+                  If you built your unit tests using a testing framework, for example, 
+                  it would be appropriate to put the testing framework you used in your devDependencies field. 
+                  To install a project's devDependencies, simply pass the <code>--dev</code> option when you use <code></code>npm install</code>. 
+                </p>
+                <img class="pull-left" src="images/heavy_modules.png" height="300px"/>
+                <p>It's worth noting that the node_modules folder should always be an entry in the .gitignore file, 
+                  as it takes a tremendous amount of space. The dependencies can always be installed with the help of<code>package.json</code> and <code>npm install</code>.</p>
+          </div>
+          <div class="clearfix content-heading">
+            <h2>Using packages</h2>
+            <img class="pull-left" src="images/require.png" height="200px" />
+            <p>Node uses the core require module for managing module dependencies. 
+              If we have a node_modules folder and an express.js module in there, the <code>require('express')</code> command will find it and we can work with it.
+              For example take a look at how we can use the express module after installing it:<br><br>
+            </p>
+            <pre>const express = require("express");<br>const app = express();</pre>
+            <p>First we fetch the module and store it in a constant, and then we instantiate it and it's ready to be used for our http requests.</p>
+        </div>
+      </div>
+    </div> 
+</div>
+<h4 class="divider line one-line">End of section</h4>
+<ul class="pager">
+  <li class="previous"><a href="/js">Previous</a></li>
+  <li class="next"><a href="/rest-api">Next</a></li>
+</ul>
+
+</div>
+
+</div>
+
     <my-footer></my-footer>
 
 </body>

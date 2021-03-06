@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,300|Raleway+Dots|Lato:300|Inconsolata|Montserrat');
+
+
 
 html, body {
   font-family: 'Roboto', sans-serif!important;
@@ -101,3 +104,36 @@ img.pull-right{
   margin-left: 1rem;
 }
 
+/* End of section hr */
+.divider {
+  display: flex;
+}
+.divider:before, .divider:after {
+  content: "";
+  flex: 1;
+}
+
+.line {
+  align-items: center;
+  margin: 1em -1em;
+}
+.line:before, .line:after {
+  height: 1px;
+  margin: 0 1em;
+}
+
+.one-line:before, .one-line:after {
+  background: linear-gradient(to right, transparent, black, transparent);
+}
+
+/* End of section next and previous buttons */
+.pager li>a{
+  background-color: maroon!important;
+  color: white!important;
+  border-radius: 5px!important;
+}
+
+.pager li>a:hover{
+  background-color: crimson!important;
+  border-radius: 5px!important;
+}
