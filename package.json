@@ -6,6 +6,6 @@
     "nodemon": "^2.0.7"
   },
   "scripts": {
-    "node": "app.js"
+    "start": "node app.js"
 }
 }
