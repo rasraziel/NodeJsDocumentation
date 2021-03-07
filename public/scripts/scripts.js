@@ -12,7 +12,7 @@ class MyFooter extends HTMLElement {
             <li class="list-inline-item footer-copyright text-center py-1" >
                 <img src="./images/address.png"></img> Guldbergsgade 29N, 2200 København N
             </li>
-            <li class="list-inline-item footer-copyright text-center py-1" >© 2021 Copyright:
+            <li class="list-inline-item footer-copyright text-center py-1" > 2021 
                 <a className="social-icon text-xs-center" target="_blank" href="https://kea.dk/"> kea.dk</a>
             </li>
         </footer>`;

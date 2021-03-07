@@ -19,8 +19,9 @@
       <div class="container-fluid text-center">    
           <div class="row content">
             <div class="col-sm-2 sidenav">
-              <p><a href="https://nodejs.org/en/download/">Get Node</a></p>
-              <p><a href="https://code.visualstudio.com/">Get VSCode</a></p>
+              <h4>Useful links</h4>
+              <p><a href="https://github.com/rasraziel/NodeExercises" target=”_blank”>Github code</a></p>
+              <p><a href="https://www.youtube.com/watch?v=W6NZfCO5SIk" target=”_blank”>JS tutorial by Mosh Hamedani</a></p>  
             </div>
             <div class="col-sm-8 text-left info-text"> 
               <h1>JavaScript basics</h1>
@@ -108,8 +109,30 @@
                             Often this is the case when working with arrays:</p>
                           <pre>for (i = 0; i < cars.length; i++) {<br>  console.log(cars[i]);<br>}</pre>
                           <p>The above code will log all the cars in the array on the console.</p>
-
                       </div>
+                      <div class="clearfix content-heading">
+                        <h2>Functions vs arrow-functions</h2>
+                        <!-- <img class="pull-left" src="images/extension.png" height="100px"/> -->
+                        <p>Arrow function is one of the features introduced in the ES6 version of JavaScript. 
+                          It allows you to create functions in a cleaner way compared to regular functions. For example,
+                          this function:</p>
+                        <pre>
+                          <span style="color: green">// function expression</span>
+                          let x = function(x, y) {
+                              return x * y;
+                          }
+                        </pre>
+                        <p>
+                          can be written as:
+                        </p>
+                        <pre>
+                          <span style="color: green">// using arrow functions</span>
+                          let x = (x, y) => x * y;
+                        </pre>
+                        <p>
+                          using an arrow function.
+                        </p>  
+                      </div>  
                     </div>
                   </div>
                 </div>
