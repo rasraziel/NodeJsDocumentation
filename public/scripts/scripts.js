@@ -8,11 +8,11 @@ class MyFooter extends HTMLElement {
             <li class="list-inline-item footer-copyright text-center py-1" >
                 <img src="./images/phone.png"></img> +45 46460000
             </li>
-            <li class="list-inline-item footer-copyright text-center py-1" > CVR: 31656206</li>
+            <li class="list-inline-item footer-copyright text-center py-1" > <span style="color: white">CVR:</span> 31656206</li>
             <li class="list-inline-item footer-copyright text-center py-1" >
                 <img src="./images/address.png"></img> Guldbergsgade 29N, 2200 København N
             </li>
-            <li class="list-inline-item footer-copyright text-center py-1" > 2021 
+            <li class="list-inline-item footer-copyright text-center py-1" > <span style="color: white">2021</span> 
                 <a className="social-icon text-xs-center" target="_blank" href="https://kea.dk/"> kea.dk</a>
             </li>
         </footer>`;
@@ -69,4 +69,4 @@ window.onload = function() {
     color: '#a020f0'
   });
 };
-  
+
