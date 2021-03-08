@@ -71,7 +71,7 @@
                   </p>
                     <p>So far in the course we have not worked with MongoDB, we have only used hard-coded data. Take a look at this test data for example:</p>
                     <pre>
-                      //Test data
+                      <span style="color: green">//Test data</span>
                       const data = {
                         "courses":[{"id":1, "name":"Java", "teacher":"John"},
                                    {"id":2, "name":"JavaScript", "teacher":"Mike"},
@@ -96,16 +96,16 @@
                     <p>Notice how we use the routes or endpoints we designed in the previous section. In the get method we provide the endpoint
                        and a callback function in the form of an arrow function that takes 2 parameters request and response and sends our data in the response.
                       </p>
-                      <img src="images/courses.png" />
+                      <img class="my-border" src="images/courses.png" />
                       <p>To get a specific course, we would need to use the id:</p>
                       <pre>
-                        //GET method to get courses by id
+                        <span style="color: green">//GET method to get courses by id</span>
                         app.get('/courses/:id', (req, res)=>{
                           res.send({"course": `${data.courses[req.params.id-1].name} with ${data.courses[req.params.id-1].teacher}`})
                           console.log(`The course with id=${req.params.id} has been retrieved!`);
                         });
                       </pre>
-                      <img src="images/courses_id.png" />
+                      <img class="my-border" src="images/courses_id.png" />
                 </div>
                 <div class="clearfix content-heading">
                   <h2>POST</h2>
@@ -113,7 +113,7 @@
                     To save a new course in our "database" we would need to use the POST HTTP method.
                   </p>
                   <pre>
-                    //POST method to create a course and set an id
+                    <span style="color: green">//POST method to create a course and set an id</span>
                     app.post('/courses/:id', (req, res)=>{
                       res.send(
                                 {
@@ -124,7 +124,7 @@
                         console.log(`A new course (${req.params.name}) has been saved!`);
                     }); 
                   </pre>
-                  <img src="images/post_courses_id.png" />
+                  <img class="my-border" src="images/post_courses_id.png" />
                 </div>
                 <div class="clearfix content-heading">
                   <h2>PUT</h2>
@@ -140,19 +140,19 @@
                       console.log("Course name updated");
                   });
                   </pre>
-                  <img src="images/put_courses_id.png" />
+                  <img class="my-border" src="images/put_courses_id.png" />
                 </div>    
                 <div class="clearfix content-heading">
                   <h2>DELETE</h2>
                   <p>To delete a course in our "database" we would use the DELETE method and we only need to send the id.</p>
                   <pre>
-                    //DELETE method to delete a course by id
+                    <span style="color: green">//DELETE method to delete a course by id</span>
                     app.delete('/courses/:id', (req, res)=>{
                       res.send({"id": req.params.id});
                       console.log(`Course with id ${req.params.id} has been deleted!`);
                     });
                   </pre>
-                  <img src="images/delete_courses_id.png" />
+                  <img class="my-border" src="images/delete_courses_id.png" />
                 </div>        
                 <div class="clearfix content-heading">
                   <h2>Serving html pages</h2>
@@ -169,7 +169,7 @@
               </div>
               <h4 class="divider line one-line">End of section</h4>
               <ul class="pager">
-                <li class="previous"><a href="/rest-api">Previous</a></li>
+                <li class="previous"><a class="effect effect-3 go-to-rest" href="/rest-api">Previous</a></li>
               </ul>
           </div>
           
