@@ -15,6 +15,27 @@ html, body {
   height:100%;
   width:100%;
 }
+
+.paragraphs{
+	margin-left: 5rem;
+}
+
+.clearfix.content-heading p{
+	font-size: 15px; 
+	line-height: 24px; 
+	margin: 0 0 24px; 
+	text-align: justify; 
+	text-justify: inter-word;
+}
+
+.clearfix.content-heading li{
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 24px; 
+	margin: 0 0 24px; 
+	text-align: justify; 
+	text-justify: inter-word;
+}
  
  /* Remove the navbar's default margin-bottom and rounded borders */ 
  .navbar {
@@ -43,12 +64,14 @@ footer.navbar {
     bottom: 0;
     left: 0;
     right: 0;
+	min-height: 30px!important;
 }
+
 
 footer li{
   list-style-type: none;
-  display:inline;
-  margin-left: 5%;
+  margin-right: 5%;
+  display: inline;
 }
 
 footer li img{
@@ -96,7 +119,8 @@ img.pull-left, img.pull-right, img.my-border{
   padding: 2rem 4rem;
   border: 3px solid #333333;
   border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-  margin-right: 1rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
 }
 
 
