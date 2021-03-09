@@ -20,12 +20,14 @@ html, body {
 	margin-left: 5rem;
 }
 
-.clearfix.content-heading p{
+.clearfix.content-heading p,
+.info-text{
 	font-size: 15px; 
 	line-height: 24px; 
 	margin: 0 0 24px; 
 	text-align: justify; 
 	text-justify: inter-word;
+	margin-bottom: 5rem;
 }
 
 .clearfix.content-heading li{
@@ -91,11 +93,6 @@ footer li img{
   border-radius: 50%;
   height:30rem;
   width:30rem;
-}
-
-.info-text{
-  margin-bottom: 5rem;
-  font-size: 2rem;
 }
 
 
