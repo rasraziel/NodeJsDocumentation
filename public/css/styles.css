@@ -11,6 +11,20 @@ html, body {
   height: 100%;
 }
 
+.my-links{
+  color: #382D69;
+  font-weight: bold;
+}
+
+.my_symbols{
+  font-size: 2rem;
+}
+
+.clearfix h2{
+  font-family: monospace;
+  color: black;
+}
+
 .pr{
   height:100%;
   width:100%;
@@ -52,7 +66,7 @@ html, body {
 .sidenav {
   padding-top: 20px;
   background-color: #f1f1f1;
-  height: 100%;
+  height: fit-content;
 }
 
 /* Set black background color, white text and some padding */
@@ -116,14 +130,28 @@ ul.navbar-nav li.active a{
   position: absolute;
 }
 
-/* Image borders */
-img.pull-left, img.pull-right, img.my-border{
-  padding: 2rem 4rem;
-  border: 3px solid #333333;
+/* Links border */
+div.my-border{
+  border: 2px solid #bbb7b7;
   border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-  margin-right: 2rem;
+}
+
+/* Image borders */
+img.pull-right, img.my-border{
+  padding: 2rem 4rem;
+  border: 2px solid #bbb7b7;
+  border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
   margin-left: 2rem;
 }
+
+img.pull-left{
+  padding: 2rem 4rem;
+  border: 2px solid #bbb7b7;
+  border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+  margin-right: 2rem;
+}
+
+
 
 
 /* End of section hr */
