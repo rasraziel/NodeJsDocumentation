@@ -77,7 +77,18 @@ if(!(navigator.userAgent.indexOf("Firefox") != -1 && navigator.platform.indexOf(
   });
 }
 
+// Button to get to top of page function
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// Dynamic animation time css property based on length of title so the typing speed is the same
+$(document).ready(function() {
+   let length = $("h1.typed-title").text().length;
+   $("h1.typed-title").css({
+    'animation' : 'typing ' + length/9.43 + 's steps(300, end) forwards,  blink-caret 999ms step-end ' + length/9.43 + 's infinite'
+  });
+});
+
+
