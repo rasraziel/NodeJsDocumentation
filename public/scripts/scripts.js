@@ -58,7 +58,7 @@ class MyFooter extends HTMLElement {
 
 
 
-//ParticlesJS loaded only if it's not Firefox on Windows because of lag
+//ParticlesJS loaded only if it's not Firefox on Windows because of lag - main logo changes css
 if(!(navigator.userAgent.indexOf("Firefox") != -1 && navigator.platform.indexOf('Win')!= -1)){
   window.onload = function() {
     Particles.init({
@@ -70,6 +70,11 @@ if(!(navigator.userAgent.indexOf("Firefox") != -1 && navigator.platform.indexOf(
       color: '#a020f0'
     });
   };
+} else {
+  $(document).ready(function() {
+    $('canvas.background').removeClass('background');
+    $('img.node-logo').addClass('firefox-win'); 
+  });
 }
 
 function topFunction() {

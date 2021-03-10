@@ -95,6 +95,11 @@ footer li img{
   width:30rem;
 }
 
+/* Node logo changes on Windows firefox due to lack of particlesJS */
+img.firefox-win{
+  border-radius: 10px;
+  margin-left: 30%;
+}
 
 ul.navbar-nav li.active a:hover,
 ul.navbar-nav li.active a:focus,
