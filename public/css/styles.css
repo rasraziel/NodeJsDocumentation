@@ -343,7 +343,9 @@ img.pull-left, img.pull-right, img.my-border{
 
 /* Section title animation */
 .typewriter{
-	max-width: fit-content;
+  max-width: intrinsic; /* Safari */
+	max-width: -moz-fit-content; /* Firefox */
+  max-width: fit-content; /* Chrome */
 }
 
 .typewriter h1 {

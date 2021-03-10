@@ -58,17 +58,19 @@ class MyFooter extends HTMLElement {
 
 
 
-//ParticlesJS loaded
-window.onload = function() {
-  Particles.init({
-    selector: '.background',
-    maxParticles: 100,
-    sizeVariations: 10,
-    speed:2,
-    connectParticles: true,
-    color: '#a020f0'
-  });
-};
+//ParticlesJS loaded only if it's not Firefox on Windows because of lag
+if(!(navigator.userAgent.indexOf("Firefox") != -1 && navigator.platform.indexOf('Win')!= -1)){
+  window.onload = function() {
+    Particles.init({
+      selector: '.background',
+      maxParticles: 100,
+      sizeVariations: 10,
+      speed:2,
+      connectParticles: true,
+      color: '#a020f0'
+    });
+  };
+}
 
 function topFunction() {
   document.body.scrollTop = 0;
