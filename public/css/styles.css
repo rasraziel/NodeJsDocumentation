@@ -357,13 +357,15 @@ img.pull-left, img.pull-right, img.my-border{
 	color: black;
 	font-family:monospace;
 	overflow: hidden; /* Ensures the content is not revealed until the animation */
-	border-right: .15em solid #fff; /* The typwriter cursor */
+	border-right: .15em solid black; /* The typwriter cursor */
 	white-space: nowrap; /* Keeps the content on a single line */
 	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
 	animation: 
-		typing 3.5s steps(30, end),
-    	blink-caret .5s step-end infinite;
+		typing 3.5s steps(300, end) forwards,
+    	blink-caret 999ms step-end 3.5s infinite;
   }
+
+ 
   
   /* The typing effect */
   @keyframes typing {
