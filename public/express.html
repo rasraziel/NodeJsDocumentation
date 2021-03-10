@@ -18,11 +18,15 @@
       <my-navbar></my-navbar>
       <div class="container-fluid text-center">    
         <div class="row content">
-          <div class="col-sm-2 sidenav">
-            <h4>Useful links</h4>
+          <div class="col-sm-2 sidenav my-border">
+            <h4 class="my-links">Useful links</h4>
+            <h4 class="divider line one-line my-links"><span class="my_symbols">↡</span></h4>
             <p><a href="https://expressjs.com/en/5x/api.html" target=”_blank”>Express documentation</a></p>
+            <h4 class="divider line one-line my-links">⬢</h4>
             <p><a href="https://github.com/rasraziel/NodeExercises" target=”_blank”>Github code</a></p>
-            <p><a href="https://www.youtube.com/watch?v=L72fhGm1tfE" target=”_blank”>Youtube tutorial by Traversy Media</a></p>       
+            <h4 class="divider line one-line my-links">⬢</h4>
+            <p><a href="https://www.youtube.com/watch?v=L72fhGm1tfE" target=”_blank”>Youtube tutorial by Traversy Media</a></p> 
+            <h4 class="divider line one-line my-links"><span class="my_symbols">↭</span></h4>      
           </div>
           <div class="col-sm-8 text-left info-text"> 
             <div class="typewriter">
@@ -100,13 +104,7 @@
                       </p>
                       <img class="my-border" src="images/courses.png" />
                       <p>To get a specific course, we would need to use the id:</p>
-                      <pre>
-                        <span style="color: green">//GET method to get courses by id</span>
-                        app.get('/courses/:id', (req, res)=>{
-                          res.send({"course": `${data.courses[req.params.id-1].name} with ${data.courses[req.params.id-1].teacher}`})
-                          console.log(`The course with id=${req.params.id} has been retrieved!`);
-                        });
-                      </pre>
+                      <pre><span style="color: green">//GET method to get courses by id</span><br>app.get('/courses/:id', (req, res)=>{<br>  res.send({"course": `${data.courses[req.params.id-1].name} with ${data.courses[req.params.id-1].teacher}`});<br>  console.log(`The course with id=${req.params.id} has been retrieved!`);<br>});</pre>
                       <img class="my-border" src="images/courses_id.png" />
                 </div>
                 <div class="clearfix content-heading">

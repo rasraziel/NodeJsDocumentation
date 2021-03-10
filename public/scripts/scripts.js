@@ -67,7 +67,7 @@ if(!(navigator.userAgent.indexOf("Firefox") != -1 && navigator.platform.indexOf(
       sizeVariations: 10,
       speed:2,
       connectParticles: true,
-      color: '#a020f0'
+      color: '#382D69'
     });
   };
 } else {
