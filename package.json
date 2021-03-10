@@ -3,9 +3,10 @@
     "express": "^4.17.1",
     "jquery": "^3.6.0",
     "jsdom": "^16.4.0",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "serve-favicon": "^2.5.0"
   },
   "scripts": {
     "start": "node app"
-}
+  }
 }
