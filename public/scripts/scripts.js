@@ -58,11 +58,10 @@ class MyFooter extends HTMLElement {
 
  
   //Navigation menu highlighting tab and night/light mode detection
-  $(document).ready(function() {
+  $(document).ready(async function() {
     $('li.active').removeClass('active');
     $('a[href="' + location.pathname + '"]').closest('li').addClass('active'); 
-    console.log(JSON.parse(localStorage.getItem('isDark')));
-    if(JSON.parse(localStorage.getItem('isDark'))){
+    if(await getDark()){
       $("#Switch").prop("checked", false);
       $('body').addClass("dark-mode");
       $('h1.typed-title').addClass("dark-mode");
@@ -82,7 +81,10 @@ class MyFooter extends HTMLElement {
   });
 
   // Toggle night/light mode
-  function darker() {
+  async function darker() {
+    
+    await setDark(!(await getDark()));
+
     let body = document.body;
     let h1 = document.getElementById("typed-title");
     let links = document.getElementById("sidenav");
@@ -98,8 +100,18 @@ class MyFooter extends HTMLElement {
     footer.classList.toggle("dark-mode");
     divider.classList.toggle("dark-mode");
   
-    localStorage.setItem("isDark", !JSON.parse(localStorage.getItem("isDark")));
+    
   }
+
+  async function getDark(){
+    return JSON.parse(localStorage.getItem("isDark"));
+  };
+
+  async function setDark(value){
+    localStorage.setItem("isDark", value);
+  };
+
+
 
 
 
