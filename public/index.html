@@ -14,16 +14,15 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <script src="./scripts/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js" data-deferred="1"></script>
+        <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
         
     </head>
       <body>
-        
-
-          <my-navbar></my-navbar>
+        <my-navbar></my-navbar>
           
     <div class="container-fluid text-center">    
       <div class="row content">
-        <div class="col-sm-2 sidenav my-border">
+        <div id="sidenav" class="col-sm-2 sidenav my-border">
           <h4 class="my-links">Useful links</h4>
           <h4 class="divider line one-line my-links"><span class="my_symbols">↡</span></h4>
             <p><a href="https://github.com/rasraziel/NodeExercises" target=”_blank”>Code used in the code snippets</a></p>
@@ -31,7 +30,7 @@
         </div>
         <div class="col-sm-8 text-left info-text"> 
           <div class="typewriter">
-            <h1 class="typed-title">&gt;Welcome to the NodeJs study page</h1>
+            <h1 id="typed-title" class="typed-title">&gt;Welcome to the NodeJs study page</h1>
           </div>
           <hr>
           <p>This is a website documenting everything we have learned so far in the NodeJs elective of the 4th semester at KEA.</p>
@@ -41,7 +40,7 @@
           <hr>
           <p>Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the user's web browser. Consequently, Node.js represents a "JavaScript everywhere" paradigm, unifying web-application development around a single programming language, rather than different languages for server-side and client-side scripts.</p>
           
-          <h4 class="divider line one-line"></h4>
+          <h4 id="divider" class="divider divider2 line one-line"></h4>
           <ul class="pager">
             <li class="next"><a class="effect effect-3 go-to-getting-started" href="/getting-started">Start Learning</a></li>
           </ul>
