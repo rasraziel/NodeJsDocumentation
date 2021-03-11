@@ -1,7 +1,7 @@
 class MyFooter extends HTMLElement {
     connectedCallback() {
       this.innerHTML = `
-        <footer class="navbar navbar-expand-sm container-fluid text-center">
+        <footer class="navbar navbar-expand-sm container-fluid text-center" id="myFooter">
             <li class="list-inline-item footer-copyright text-center py-1" >
                 <img src="./images/email.jpg"></img>kea@kea.dk
             </li>
@@ -44,17 +44,62 @@ class MyFooter extends HTMLElement {
    </ul>
  </div>
 </div>
+<div class="switch">
+          <input onclick="darker()" type="checkbox" class="switch__input" id="Switch">
+          <label class="switch__label" for="Switch">
+              <span class="switch__indicator"></span>
+              <span class="switch__decoration"></span>
+          </label>
+      </div>
 </nav>`;
     }
   }
   customElements.define('my-navbar', MyNavBar);
 
  
-  //Navigation menu highlighting tab
+  //Navigation menu highlighting tab and night/light mode detection
   $(document).ready(function() {
     $('li.active').removeClass('active');
     $('a[href="' + location.pathname + '"]').closest('li').addClass('active'); 
+    console.log(JSON.parse(localStorage.getItem('isDark')));
+    if(JSON.parse(localStorage.getItem('isDark'))){
+      $("#Switch").prop("checked", false);
+      $('body').addClass("dark-mode");
+      $('h1.typed-title').addClass("dark-mode");
+      $('div.sidenav').addClass("dark-mode");
+      $('div.span4').addClass("dark-mode");
+      $('footer.navbar').addClass("dark-mode");
+      $('h4.divider2').addClass("dark-mode");
+    }else{
+      $("#Switch").prop("checked", true);
+      $('body').removeClass('dark-mode');
+      $('h1.typed-title').removeClass("dark-mode");
+      $('div.sidenav').removeClass("dark-mode");
+      $('div.span4').removeClass("dark-mode");
+      $('footer.navbar').removeClass("dark-mode");
+      $('h4.divider2').removeClass("dark-mode");
+    }
   });
+
+  // Toggle night/light mode
+  function darker() {
+    let body = document.body;
+    let h1 = document.getElementById("typed-title");
+    let links = document.getElementById("sidenav");
+    let main_content = document.getElementById("span4");
+    let footer = document.getElementById("myFooter");
+    let divider = document.getElementById("divider");
+  
+    
+    body.classList.toggle("dark-mode");
+    h1.classList.toggle("dark-mode");
+    links.classList.toggle("dark-mode");
+    main_content.classList.toggle("dark-mode");
+    footer.classList.toggle("dark-mode");
+    divider.classList.toggle("dark-mode");
+  
+    localStorage.setItem("isDark", !JSON.parse(localStorage.getItem("isDark")));
+  }
 
 
 
@@ -90,5 +135,3 @@ $(document).ready(function() {
     'animation' : 'typing ' + length/9.43 + 's steps(300, end) forwards,  blink-caret 999ms step-end ' + length/9.43 + 's infinite'
   });
 });
-
-
