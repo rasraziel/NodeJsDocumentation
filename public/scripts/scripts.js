@@ -3,17 +3,17 @@ class MyFooter extends HTMLElement {
       this.innerHTML = `
         <footer class="navbar navbar-expand-sm container-fluid text-center" id="myFooter">
             <li class="list-inline-item footer-copyright text-center py-1" >
-                <img src="./images/email.jpg"></img>kea@kea.dk
+                <img src="./images/email.jpg"></img>mail@mail.dk
             </li>
             <li class="list-inline-item footer-copyright text-center py-1" >
-                <img src="./images/phone.png"></img> +45 46460000
+                <img src="./images/phone.png"></img> +45 512 156 84
             </li>
-            <li class="list-inline-item footer-copyright text-center py-1" > <span style="color: white">CVR:</span> 31656206</li>
+            <li class="list-inline-item footer-copyright text-center py-1" > <span style="color: white">CVR:</span> 35698425</li>
             <li class="list-inline-item footer-copyright text-center py-1" >
-                <img src="./images/address.png"></img> Guldbergsgade 29N, 2200 København N
+                <img src="./images/address.png"></img> H.C. Andersens vej, 1952 Frederiksberg C
             </li>
             <li class="list-inline-item footer-copyright text-center py-1" > <span style="color: white">2021</span> 
-                <a className="social-icon text-xs-center" target="_blank" href="https://kea.dk/"> kea.dk</a>
+                <a className="social-icon text-xs-center" target="_blank" href="https://nodejs.org/en/"> nodejs.org</a>
             </li>
         </footer>`;
     }
