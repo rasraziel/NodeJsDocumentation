@@ -39,7 +39,7 @@ class MyFooter extends HTMLElement {
      <li><a href="/getting-started">Getting Started</a></li>
      <li><a href="/js">Javascript</a></li>
      <li><a href="/node-modules">Node Modules</a></li>
-     <li><a href="/rest-api">REST API</a></li>
+     <li><a href="/rest">REST API</a></li>
      <li><a href="/express">Express</a></li>
    </ul>
  </div>
