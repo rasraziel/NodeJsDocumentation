@@ -36,11 +36,11 @@ class MyFooter extends HTMLElement {
           <div class="collapse navbar-collapse" id="myNavbar">
    <ul class="nav navbar-nav">
      <li><a href="/NodeJsDocumentation">Home</a></li>
-     <li><a href="/getting-started">Getting Started</a></li>
-     <li><a href="/js">Javascript</a></li>
-     <li><a href="/node-modules">Node Modules</a></li>
-     <li><a href="/rest">REST API</a></li>
-     <li><a href="/express">Express</a></li>
+     <li><a href="/NodeJsDocumentation/getting-started">Getting Started</a></li>
+     <li><a href="/NodeJsDocumentation/js">Javascript</a></li>
+     <li><a href="/NodeJsDocumentation/node-modules">Node Modules</a></li>
+     <li><a href="/NodeJsDocumentation/rest">REST API</a></li>
+     <li><a href="/NodeJsDocumentation/express">Express</a></li>
    </ul>
  </div>
 </div>
