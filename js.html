@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+        <link rel="stylesheet" href="./css/styles.css" type="text/css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="./scripts/scripts.js"></script>
+    </head>
+    <body>
+      <my-navbar></my-navbar>
+      <div class="container-fluid text-center">    
+          <div class="row content">
+            <div id="sidenav" class="col-sm-2 sidenav my-border">
+              <h4 class="my-links">Useful links</h4>
+              <h4 class="divider line one-line my-links"><span class="my_symbols">↡</span></h4>
+              <p><a href="https://github.com/rasraziel/NodeExercises" target=”_blank”>Github code</a></p>
+              <h4 class="divider line one-line my-links">⬢</h4>
+              <p><a href="https://www.youtube.com/watch?v=W6NZfCO5SIk" target=”_blank”>JS tutorial by Mosh Hamedani</a></p>  
+              <h4 class="divider line one-line my-links"><span class="my_symbols">↭</span></h4>
+            </div>
+            <div class="col-sm-8 text-left info-text"> 
+              
+              <div class="typewriter">
+                <h1 id="typed-title" class="typed-title">&gt;JavaScript Basics</h1>
+              </div>
+              <hr>
+              <div class="paragraphs">
+                  <div class="row">
+                    <div class="span4" id="span4">
+                      <div class="clearfix content-heading">
+                          <h2>Hello World</h2>
+                          <img class="pull-left" src="images/extension.png" height="100px"/>
+                          <p>After installing Node and VSCode, we can start a New Project in VSCode and write our first program, 
+                            so we create a new file. We have to give the .js extension to the file so the editor knows it's a JavaScript file.
+                            Now we write the following code:
+                          </p>
+                          <pre><code>console.log('Hello World');</code></pre>
+                          <p>After saving the file, we are ready to run our first program. 
+                            First we make sure that Node was properly installed.
+                            We enter <code>node -v</code> into VSCode's terminal:
+                          </p>
+                          <p>Which should give us the version of Node installed: <code>v14.15.1</code></p>
+                          <p> In which case we are good to go. So now by executing the command <code>node app.js</code> 
+                            we get the following result:
+                          <code>Hello World</code></p>  
+                      </div>
+                      <div class="clearfix content-heading">
+                        <h2>Variables</h2>
+                          <img class="pull-right" src="images/javascript-variables.jpg" height="300px" width="500px"/>
+                          <p>JavaScript variables are containers for storing data values. Before 2015, using the <code>var</code> keyword was the only way to declare a JavaScript variable.
+                            The 2015 version of JavaScript (ES6) allows the use of the <code>const</code> keyword to define a variable that cannot be reassigned,
+                             and the <code>let</code> keyword to define a variable with restricted scope(block scope). JavaScript variables can hold numbers like 100, strings like "John Doe
+                              and many more types of data, like undefined, null or boolean. Strings are written inside double or single quotes. Numbers are written without quotes.
+                             If you put a number in quotes, it will be treated as a text string.
+                             Below is an example of variable declaration:</p>
+                          <pre>let pi = 3.14;<br>let person = "John Doe";<br>let answer = 'Yes I am!';<br>const firstName = "Walter";<br>const lastName = "White";<br>const year = "2020";<br>const number = 1;</pre>
+                          <p>We can use these variable for different operations. With string literals we can format a string exactly how we want it. For example this line of code:</p>
+                          <pre>console.log(`My first name is ${firstName} and my last name is ${lastName}`);</pre>
+                          <p>Will log <code>My first name is Walter and my last name is White</code> on the console. And the following line of code:</p>
+                          <pre>console.log(+ year + number);</pre>
+                          <p>will first cast the string <code>year</code> into a number, make the addition and log the result as <code>2021</code>.</p> 
+                      </div>
+                      <div class="clearfix content-heading">
+                        <h2>Strings</h2>
+                          <img class="pull-left" src="images/Javascript-Strings.jpg" height="300px" width="500px"/>
+                          <p>
+                            With strings we can perform many kinds of operations. For example these lines of code:
+                          </p>
+                          <pre>const anotherNumberOne = "1.10";<br>const anotherNumberTwo = "2.30";<br>console.log((+numberOne + +numberTwo).toFixed(2));</pre>            
+                          <p>will first cast the strings <code>anotherNumberOne</code> and <code>anotherNumberTwo</code> into numbers, make the addition and log the result with 2 decimal points as <code>3.40</code>.</p>
+                          <pre>const letters = "abc";<br>console.log(letters.indexOf('c'));</pre>
+                          <p>The above lines of code will log the index of the letter 'c' in the string, giving us <code>2</code>.</p>
+                          <pre>console.log(fact.replace('b','B'));</pre>
+                          <p>And this one would substitute the lowercase 'b' with an uppercase 'B' logging <code>aBc</code> on the console.</p>
+                        </div>
+                      <div class="clearfix content-heading">
+                        <h2>Objects</h2>
+                          <img class="pull-right" src="images/objects.jpeg" height="300px"/>
+                          <p>
+                            JavaScript objects are containers for named values called properties or methods. The values are written as key:value pairs (key and value separated by a colon).
+                            We can define (and create) a JavaScript object with an object literal <code>{ }</code>:
+                          </p>
+                          <pre>let person = {<br>  firstName: "John",<br>  lastName: "Doe",<br>  age: 50,<br>  eyeColor: "blue"<br>};</pre>
+                         <p>We can access the onject properties in 2 ways, with the <code>.</code> operator or using square brackets <code>[ ]</code>:</p>
+                        <pre>person.lastName;<br>person["lastName"];</pre>
+                        <p>As with other programming languages, objects can also contain functions:</p>
+                        <pre>let person = {<br> firstName: "John",<br> lastName : "Doe",<br> id       : 5566,<br> fullName : function() {<br>   return this.firstName + " " + this.lastName;<br> }<br>};</pre>
+                        <p>We can also add or remove properties at will:</p>
+                        <pre>const thisSong = {"description": "The best song in the world."};<br>delete thisSong.description;<br>thisSong.about = "Just a tribute.";<br>console.log(thisSong);</pre>
+                        <p>The above lines of code will remove the <code>"description"</code> property and add a new <code>"about"</code> property to the thisSong object.</p>  
+                      </div>
+                      <div class="clearfix content-heading">
+                        <h2>Arrays and loops</h2>
+                          <img class="pull-left" src="images/arrays.jpg" height="300px"/>
+                          <p>
+                            JavaScript arrays are used to store multiple values in a single variable and we can access the values by referring to an index number.
+                            Using an array literal is the easiest way to create a JavaScript Array:
+                          </p>
+                          <pre>let cars = ["Saab", "Volvo", "BMW"];<br>let name = cars[1];<br>console.log(name);</pre>
+                          <p>The above code creates an array with car names, then retrieves the item at index 1 and logs it on the console.</p>
+                          <p>We can change a value in an array:</p>
+                          <pre>cars[0] = "Opel";</pre>
+                          <p>The real strength of JavaScript arrays are the built-in array properties and methods:</p>
+                          <pre>let length = cars.length;   <span style="color: green">// The length property returns the number of elements</span><br>let sorted = cars.sort();   <span style="color: green">// The sort() method sorts arrays</span></pre>
+                          <p>The difference between arrays and objects is that arrays use numbered indexes, while objects use named indexes.</p>
+                          <p>Loops are handy, if you want to run the same code over and over again, each time with a different value. 
+                            Often this is the case when working with arrays:</p>
+                          <pre>for (i = 0; i < cars.length; i++) {<br>  console.log(cars[i]);<br>}</pre>
+                          <p>The above code will log all the cars in the array on the console.</p>
+                      </div>
+                      <div class="clearfix content-heading">
+                        <h2>Functions vs arrow-functions</h2>
+                        <!-- <img class="pull-left" src="images/extension.png" height="100px"/> -->
+                        <p>Arrow function is one of the features introduced in the ES6 version of JavaScript. 
+                          It allows you to create functions in a cleaner way compared to regular functions. For example,
+                          this function:</p>
+                        <pre>
+                          <span style="color: green">// function expression</span>
+                          let x = function(x, y) {
+                              return x * y;
+                          }
+                        </pre>
+                        <p>
+                          can be written as:
+                        </p>
+                        <pre>
+                          <span style="color: green">// using arrow functions</span>
+                          let x = (x, y) => x * y;
+                        </pre>
+                        <p>
+                          using an arrow function.
+                        </p>  
+                      </div>  
+                    </div>
+                  </div>
+                </div>
+                <h4 id="divider" class="divider divider2 line one-line">End of section</h4>
+                <ul class="pager">
+                  <li class="previous"><a class="effect effect-3 go-to-getting-started" href="/getting-started">Previous</a></li>
+                  <li class="top"><button class="effect" onclick="topFunction()">Top of page</button></li>
+                  <li class="next"><a class="effect effect-3 go-to-node-modules" href="/node-modules">Next</a></li>
+                </ul>
+            </div>
+            
+          </div>
+        </div>
+  <my-footer></my-footer>
+
+</body>
+</html>

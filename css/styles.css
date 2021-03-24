@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,300|Raleway+Dots|Lato:300|Inconsolata|Montserrat');
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+
+html, body {
+  font-family: 'Roboto', sans-serif!important;
+  margin: 0;
+  height: 100%;
+}
+
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.typewriter h1.dark-mode{
+  color: white;
+  border-right: .15em solid white; /* The typwriter cursor */
+}
+
+.my-links{
+  color: #382D69;
+  font-weight: bold;
+}
+
+.my_symbols{
+  font-size: 2rem;
+}
+
+.clearfix h2{
+  font-family: monospace;
+  color: inherit;
+}
+
+div.span4{
+  color: black;
+}
+
+div.dark-mode{
+  color: white;
+}
+
+.pr{
+  height:100%;
+  width:100%;
+}
+
+.paragraphs{
+	margin-left: 5rem;
+}
+
+.clearfix.content-heading p,
+.info-text{
+	font-size: 15px; 
+	line-height: 24px; 
+	margin: 0 0 24px; 
+	text-align: justify; 
+	text-justify: inter-word;
+	margin-bottom: 5rem;
+}
+
+.clearfix.content-heading li{
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 24px; 
+	margin: 0 0 24px; 
+	text-align: justify; 
+	text-justify: inter-word;
+}
+ 
+ /* Remove the navbar's default margin-bottom and rounded borders */ 
+ .navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 450px}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  padding-top: 20px;
+  background-color: #f1f1f1;
+  height: fit-content;
+}
+
+.sidenav.dark-mode, 
+.sidenav.dark-mode>h4,
+.sidenav.dark-mode>a{
+  background-color:rgb(188, 188, 214);
+  color: black;
+  border-radius: 5px solid black;
+}
+
+/* Set black background color, white text and some padding */
+footer.navbar {
+    color : gray;
+    font-size: 1.6rem;
+    background-color:black;
+    position: fixed;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	min-height: 30px!important;
+}
+
+footer.dark-mode{
+  color: white !important;
+  background-color: #333333;
+}
+
+footer.dark-mode{
+  color: black;
+}
+
+
+footer li{
+  list-style-type: none;
+  margin-right: 5%;
+  display: inline;
+}
+
+footer li img{
+  height: 1%;
+  width: 1%;
+}
+
+.logo{
+  height: 5.5rem;
+  width: 9rem;
+  margin-top: -2rem;
+  margin-left: -1.9rem;
+  margin-right: -1.5rem;
+}
+
+.node-logo{
+  border-radius: 50%;
+  height:30rem;
+  width:30rem;
+}
+
+/* Node logo changes on Windows firefox due to lack of particlesJS */
+img.firefox-win{
+  border-radius: 10px;
+  margin-left: 30%;
+}
+
+ul.navbar-nav li.active a:hover,
+ul.navbar-nav li.active a:focus,
+ul.navbar-nav li.active a:active, 
+ul.navbar-nav li.active a:target,
+ul.navbar-nav li.active a{
+  background-color: crimson!important;
+}
+
+.background {
+  max-height: 35rem!important;
+  max-width: 70rem!important;
+  display:inline-flex;
+  position: absolute;
+}
+
+/* Links border */
+div.my-border{
+  border: 2px solid #bbb7b7;
+  border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+}
+
+/* Image borders */
+img.pull-right, img.my-border{
+  background-color: white;
+  padding: 2rem 4rem;
+  border: 2px solid #bbb7b7;
+  border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+  margin-left: 2rem;
+}
+
+img.pull-left{
+  background-color: white;
+  padding: 2rem 4rem;
+  border: 2px solid #bbb7b7;
+  border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+  margin-right: 2rem;
+}
+
+
+
+
+/* End of section hr */
+.divider {
+  display: flex;
+}
+.divider:before, .divider:after {
+  content: "";
+  flex: 1;
+}
+
+.line {
+  align-items: center;
+  margin: 1em -1em;
+}
+.line:before, .line:after {
+  height: 1px;
+  margin: 0 1em;
+}
+
+.one-line:before, .one-line:after {
+  background: linear-gradient(to right, transparent, black, transparent);
+}
+
+h4.dark-mode:before, h4.dark-mode:after{
+  background: linear-gradient(to right, transparent, white, transparent);
+}
+
+/* End of section next and previous buttons */
+.pager li>a, .pager li>button{
+  background-color: maroon!important;
+  color: white!important;
+  border-radius: 5px!important;
+}
+
+.pager li>a:hover, .pager li>button:hover{
+  background-color: crimson!important;
+  border-radius: 5px!important;
+}
+
+.pager li>button:focus{
+	outline: 0;
+}
+
+/* Button effects */
+.effect {
+  border: 1px solid #ddd;	
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  text-transform: capitalize;
+  /* background-color: - add your own background-color */
+  font-family: 'Roboto', sans-serif;
+  /* put your font-family */
+  font-size: 18px;
+  padding: 5px 0px;
+  width: 150px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+/* effect-1 styles */
+.effect.effect-1 {
+  transition: all 0.2s linear 0s;
+}
+.effect.effect-1:before {
+  content: "\f178";
+  font-family: FontAwesome;
+  font-size: 15px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  height: 100%;
+  width: 40px;
+  transition: all 0.2s linear 0s;
+}
+.effect.effect-1:hover {
+  text-indent: -20px;
+}
+.effect.effect-1:hover:before {
+  opacity: 1;
+  text-indent: 0px;
+}
+/* effect-2 styles */
+.effect.effect-2 {
+  transition: all 0.2s linear 0s;
+}
+.effect.effect-2:before {
+  content: "\f0a4";
+  font-family: FontAwesome;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: -30px;
+  width: 30px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0px 6px 6px 0px;
+  transition: all 0.2s linear 0s;
+  text-align: center;
+}
+.effect.effect-2:hover {
+  text-indent: -30px;
+}
+.effect.effect-2:hover:before {
+  right: 0;
+  text-indent: 0px;
+}
+/* effect-3 styles */
+.effect.effect-3 {
+  transition: all 0.2s linear 0s;
+}
+.effect.effect-3:before {
+
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 18px;
+  transition: all 0.2s linear 0s;
+}
+
+.go-to-home:before {
+  content: "Home";
+}
+
+.go-to-getting-started:before {
+  content: "Getting Started";
+}
+
+.go-to-js:before {
+  content: "JavaScript";
+}
+
+.go-to-node-modules:before {
+  content: "Node Modules";
+}
+
+.go-to-rest:before {
+  content: "REST API";
+}
+
+.go-to-express:before {
+  content: "ExpressJS";
+}
+
+
+
+
+.effect.effect-3:hover {
+  text-indent: -9999px;
+}
+.effect.effect-3:hover:before {
+  top: 0;
+  text-indent: 0;
+}
+/* effect-4 styles */
+.effect.effect-4 {
+  transition: all 0.2s linear 0s;
+}
+.effect.effect-4:before {
+  content: "\f178";
+  font-family: FontAwesome;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 30px;
+  transform: scale(0, 1);
+  transition: all 0.2s linear 0s;
+}
+.effect.effect-4:hover {
+  text-indent: -9999px;
+}
+.effect.effect-4:hover:before {
+  transform: scale(1, 1);
+  text-indent: 0;
+}
+/* effect-5 styles */
+.effect.effect-5 {
+  transition: all 0.2s linear 0s;
+}
+.effect.effect-5:before {
+  content: "\f054";
+  font-family: FontAwesome;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: 100%;
+  width: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0 50% 50% 0;
+  transform: scale(0, 1);
+  transform-origin: left center;
+  transition: all 0.2s linear 0s;
+}
+.effect.effect-5:hover {
+  text-indent: 30px;
+}
+.effect.effect-5:hover:before {
+  transform: scale(1, 1);
+  text-indent: 0;
+}
+
+/* Section title animation */
+.typewriter{
+  max-width: intrinsic; /* Safari */
+	max-width: -moz-fit-content; /* Firefox */
+  max-width: fit-content; /* Chrome */
+}
+
+.typewriter h1 {
+	color: black;
+	font-family:monospace;
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	border-right: .15em solid black; /* The typwriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  /* Hard coded animation */
+	/* animation: 
+		typing 3.5s steps(300, end) forwards,
+    	blink-caret 999ms step-end 3.5s infinite; */
+  }
+
+ 
+  
+  /* The typing effect */
+  @keyframes typing {
+	from { width: 0%}
+	to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect black*/
+  @keyframes blink-caret {
+	from, to { border-color: white }
+	50% { border-color: black }
+  }
+
+
+  /* Night-day mode switch */
+
+  div.switch {
+    display: inline-block;
+    position: absolute;
+    top:0.5%;
+    right:1%;
+  }
+
+  .switch__input {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+  }
+  .switch__label {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 45px;
+    background-color: #2B2B2B;
+    border: 5px solid #5B5B5B;
+    border-radius: 9999px;
+    cursor: pointer;
+  }
+  .switch__indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(-72%);
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #7B7B7B;
+    border-radius: 9999px;
+    box-shadow: 10px 0px 0 0 rgba(0, 0, 0, 0.2) inset;
+  }
+  .switch__indicator::before, .switch__indicator::after {
+    position: absolute;
+    content: '';
+    display: block;
+    background-color: #FFFFFF;
+    border-radius: 9999px;
+  }
+  .switch__indicator::before {
+    top: 7px;
+    left: 7px;
+    width: 9px;
+    height: 9px;
+    background-color: #FFFFFF;
+    opacity: 0.6;
+  }
+  .switch__indicator::after {
+    bottom: 8px;
+    right: 6px;
+    width: 14px;
+    height: 14px;
+    background-color: #FFFFFF;
+    opacity: 0.8;
+  }
+  .switch__decoration {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: #FFFFFF;
+    border-radius: 9999px;
+  }
+  .switch__decoration::before, .switch__decoration::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: #FFFFFF;
+    border-radius: 9999px;
+  }
+  .switch__decoration::before {
+    top: -20px;
+    left: 10px;
+    opacity: 1;
+  }
+  .switch__decoration::after {
+    top: -7px;
+    left: 30px;
+  }
+  @keyframes twinkle {
+    50% {
+      opacity: 0.2;
+    }
+  }
+  
+  .switch__input:checked + .switch__label {
+    background-color: #8FB5F5;
+    border-color: #347CF8;
+  }
+  .switch__input:checked + .switch__label .switch__indicator {
+    background-color: #ECD21F;
+    box-shadow: none;
+    transform: translate(-50%, -50%) translateX(72%);
+  }
+  .switch__input:checked + .switch__label .switch__indicator::before, .switch__input:checked + .switch__label .switch__indicator::after {
+    display: none;
+  }
+  .switch__input:checked + .switch__label .switch__decoration {
+    top: 50%;
+    transform: translate(0%, -50%);
+    animation: cloud 8s linear infinite;
+    width: 20px;
+    height: 20px;
+  }
+  .switch__input:checked + .switch__label .switch__decoration::before {
+    width: 10px;
+    height: 10px;
+    top: auto;
+    bottom: 0;
+    left: -8px;
+    animation: none;
+  }
+  .switch__input:checked + .switch__label .switch__decoration::after {
+    width: 15px;
+    height: 15px;
+    top: auto;
+    bottom: 0;
+    left: 16px;
+    animation: none;
+  }
+  .switch__input:checked + .switch__label .switch__decoration, .switch__input:checked + .switch__label .switch__decoration::before, .switch__input:checked + .switch__label .switch__decoration::after {
+    border-radius: 9999px 9999px 0 0;
+  }
+  .switch__input:checked + .switch__label .switch__decoration::after {
+    border-bottom-right-radius: 9999px;
+  }
+  

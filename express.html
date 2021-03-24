@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ExpressJS</title>
+        <link rel="stylesheet" href="./css/styles.css" type="text/css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="./scripts/scripts.js"></script>
+    </head>
+    <body>
+      <my-navbar></my-navbar>
+      <div class="container-fluid text-center">    
+        <div class="row content">
+          <div id="sidenav" class="col-sm-2 sidenav my-border">
+            <h4 class="my-links">Useful links</h4>
+            <h4 class="divider line one-line my-links"><span class="my_symbols">↡</span></h4>
+            <p><a href="https://expressjs.com/en/5x/api.html" target=”_blank”>Express documentation</a></p>
+            <h4 class="divider line one-line my-links">⬢</h4>
+            <p><a href="https://github.com/rasraziel/NodeExercises" target=”_blank”>Github code</a></p>
+            <h4 class="divider line one-line my-links">⬢</h4>
+            <p><a href="https://www.youtube.com/watch?v=L72fhGm1tfE" target=”_blank”>Youtube tutorial by Traversy Media</a></p> 
+            <h4 class="divider line one-line my-links"><span class="my_symbols">↭</span></h4>      
+          </div>
+          <div class="col-sm-8 text-left info-text"> 
+            <div class="typewriter">
+              <h1 id="typed-title" class="typed-title">&gt;ExpressJS Web Framework</h1>
+            </div>
+            <hr>
+            <div class="paragraphs">
+                <div class="row">
+                  <div class="span4" id="span4">
+                    <div class="clearfix content-heading">
+                        <h2>First things first...</h2>
+                        <img class="pull-left" src="images/nodemon.jpg" height="300px"/>
+                        <p>
+                          A good package to install when working on a Node application is Nodemon. 
+                          Nodemon is a utility that will monitor for any changes in your code and automatically 
+                          restart your server. It is perfect for development. We can install it with the following 
+                          command on the terminal:
+                        </p>
+                        <pre>npm install nodemon</pre>
+                        <p>Now we just have to change the way we run our app.js file, we use <code>nodemon app.js</code> 
+                          instead of <code>node app.js</code>.</p>
+                    </div>
+                    <div class="clearfix content-heading">
+                      <h2>ExpressJS</h2>
+                      <img class="pull-left" src="images/ExpressJS.png" height="300px" width="600px"/>
+                      <p>
+                        Express.js, or simply Express, is a back end web application framework for Node.js,
+                        released as free and open-source software under the MIT License. 
+                        It is designed for building web applications and APIs.
+                        It has been called the de facto standard server framework for Node.js. 
+                        We can install it with the following command on the terminal:
+                      </p>
+                      <pre>npm install express</pre>
+                  </div>
+                  <div class="clearfix content-heading">
+                    <h2>Working with ExpressJS</h2>
+                    <p>
+                      To start working with Express we will need the following lines of code:
+                    </p>
+                    <pre>const express = require("express");<span style="color: green">// We get express from node_modules and save it in a constant</span><br>const app = express();<span style="color: green">// We instantiate express</span><br>app.use(express.json());<span style="color: green">// Middleware that parses json</span><br>app.listen(8080, err =>{<span style="color: green">// We set the port express listens at</span><br>  if (err)<br>    console.log(err);<br> else<br>    console.log("Server running on port", 8080);<br>});</pre>
+                    <p>In the above code we use <code>app.use(express.json());</code> to make use of the json 
+                    middleware of bodyparser. Middleware are those methods/functions/operations that are called between processing 
+                    the Request and sending the Response in our application method. We don't need express.json() for GET Requests or DELETE Requests,
+                    but for POST and PUT requests, because in both these requests you are sending data (in the form of some data object) to the server 
+                    and we are asking the server to accept or store that data (object), which is enclosed in the body (i.e. req.body) of that (POST or PUT) Request.
+                    <code>express.json()</code> is a method inbuilt in express to recognize the incoming Request Object as a JSON Object. This method is called as a
+                     middleware in your application using the code: <code>app.use(express.json());</code>
+                  </p>
+                    <p>So far in the course we have not worked with MongoDB, we have only used hard-coded data. Take a look at this test data for example:</p>
+                    <pre>
+                      <span style="color: green">//Test data</span>
+                      const data = {
+                        "courses":[{"id":1, "name":"Java", "teacher":"John"},
+                                   {"id":2, "name":"JavaScript", "teacher":"Mike"},
+                                   {"id":3, "name":"C#", "teacher":"Anna"}]
+                                  }
+                    </pre>
+                    <p>We will now work with some HTTP requests.</p>
+                  </div>
+                  <div class="clearfix content-heading">
+                    <h2>GET</h2>
+                    <!-- <img class="pull-left" src="images/ExpressJS.png" height="300px" width="600px"/> -->
+                    <p>
+                      To get all courses we would need to write code such as this:
+                    </p>
+                    <pre>
+                      <span style="color: green">//GET method to get all courses</span>
+                      app.get('/courses', (req, res)=>{
+                          res.send(data.courses);
+                          console.log("All courses retrieved!");
+                      });  
+                    </pre>
+                    <p>Notice how we use the routes or endpoints we designed in the previous section. In the get method we provide the endpoint
+                       and a callback function in the form of an arrow function that takes 2 parameters request and response and sends our data in the response.
+                      </p>
+                      <img class="my-border" src="images/courses.png" />
+                      <p>To get a specific course, we would need to use the id:</p>
+                      <pre><span style="color: green">//GET method to get courses by id</span><br>app.get('/courses/:id', (req, res)=>{<br>  res.send({"course": `${data.courses[req.params.id-1].name} with ${data.courses[req.params.id-1].teacher}`});<br>  console.log(`The course with id=${req.params.id} has been retrieved!`);<br>});</pre>
+                      <img class="my-border" src="images/courses_id.png" />
+                </div>
+                <div class="clearfix content-heading">
+                  <h2>POST</h2>
+                  <p>
+                    To save a new course in our "database" we would need to use the POST HTTP method.
+                  </p>
+                  <pre>
+                    <span style="color: green">//POST method to create a course and set an id</span>
+                    app.post('/courses/:id', (req, res)=>{
+                      res.send(
+                                {
+                                  "id": req.params.id,
+                                  "name": "Angular",
+                                  "teacher": "Claus"
+                                });
+                        console.log(`A new course (${req.params.name}) has been saved!`);
+                    }); 
+                  </pre>
+                  <img class="my-border" src="images/post_courses_id.png" />
+                </div>
+                <div class="clearfix content-heading">
+                  <h2>PUT</h2>
+                  <p>To replace a course in our "database" we would use the PUT method.</p>
+                  <pre>
+                    app.put('/courses/:id', (req, res)=>{
+                      res.send(
+                          {
+                              "id": req.params.id,
+                              "name": "Angular 5",
+                              "teacher": "Claus"
+                      });
+                      console.log("Course name updated");
+                  });
+                  </pre>
+                  <img class="my-border" src="images/put_courses_id.png" />
+                </div>    
+                <div class="clearfix content-heading">
+                  <h2>DELETE</h2>
+                  <p>To delete a course in our "database" we would use the DELETE method and we only need to send the id.</p>
+                  <pre>
+                    <span style="color: green">//DELETE method to delete a course by id</span>
+                    app.delete('/courses/:id', (req, res)=>{
+                      res.send({"id": req.params.id});
+                      console.log(`Course with id ${req.params.id} has been deleted!`);
+                    });
+                  </pre>
+                  <img class="my-border" src="images/delete_courses_id.png" />
+                </div>        
+                <div class="clearfix content-heading">
+                  <h2>Serving html pages</h2>
+                  <p>This website was made with ExpressJS as well. The GET method is used to serve the html pages:</p>
+                  <pre>
+                    app.get('/getting-started', (req, res)=>{
+                      res.sendFile(__dirname + "/public/getting-started.html");
+                     });
+                  </pre>
+                  <p><code>__dirname</code> is an environment variable that tells you the absolute path of the directory containing the currently executing file. And we use the <code>.sendFile()</code> function of Express this time around.</p>
+                </div>     
+                  </div>
+                </div>
+              </div>
+              <h4 id="divider" class="divider divider2 line one-line">End of section</h4>
+              <ul class="pager">
+                <li class="previous"><a class="effect effect-3 go-to-rest" href="/rest-api">Previous</a></li>
+                <li class="top"><button class="effect" onclick="topFunction()">Top of page</button></li>
+                <li class="next"><a class="effect" href="/">Home</a></li>
+              </ul>
+          </div>
+          
+        </div>
+      </div>
+    <my-footer></my-footer>
+
+</body>
+</html>

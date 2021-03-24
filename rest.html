@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>REST-API</title>
+        <link rel="stylesheet" href="./css/styles.css" type="text/css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="./scripts/scripts.js"></script>
+    </head>
+    <body>
+      <my-navbar></my-navbar>
+      <div class="container-fluid text-center">    
+        <div class="row content">
+          <div id="sidenav" class="col-sm-2 sidenav my-border">
+            <h4 class="my-links">Useful links</h4>
+            <h4 class="divider line one-line my-links"><span class="my_symbols">↡</span></h4>
+              <p><a href="https://github.com/rasraziel/NodeExercises" target=”_blank”>Github code</a></p>
+              <h4 class="divider line one-line my-links">⬢</h4>
+              <p><a href="https://www.youtube.com/watch?v=SLwpqD8n3d0" target=”_blank”>REST APIs explained by Mosh Hamedani</a></p> 
+              <h4 class="divider line one-line my-links">⬢</h4>
+              <p><a href="https://www.youtube.com/watch?v=7YcW25PHnAA" target=”_blank”>REST APIs explained by WebConcepts</a></p> 
+              <h4 class="divider line one-line my-links"><span class="my_symbols">↭</span></h4>
+          </div>
+          <div class="col-sm-8 text-left info-text"> 
+            <div class="typewriter">
+              <h1 id="typed-title" class="typed-title">&gt;Designing REST APIs</h1>
+            </div>
+            <hr>
+            <div class="paragraphs">
+                <div class="row">
+                  <div class="span4" id="span4">
+                    <div class="clearfix content-heading">
+                        <h2>What is a REST API</h2>
+                        <img class="pull-left" src="images/rest-api.png" height="300px"/>
+                        <p>A REST API (also known as RESTful API) is an application programming interface (API or web API) 
+                          that conforms to the constraints of REST architectural style and allows for interaction with 
+                          RESTful web services. REST stands for representational state transfer. When a client request is made via a RESTful API, 
+                          it transfers a representation of the state of the resource to the 
+                          requester or endpoint. This information, or representation, is delivered 
+                          in one of several formats via HTTP: JSON (Javascript Object Notation), HTML, XLT,
+                           Python, PHP, or plain text. JSON is the most generally popular format to use because,
+                          despite its name, it’s language-agnostic, as well as readable by both humans and machines. 
+                        </p>
+                    </div>
+                    <div class="clearfix content-heading">
+                      <h2>Anatomy of a REST API</h2>
+                      <img class="pull-right" src="images/anatomy.png" height="300px" width="600px"/>
+                      <p>REST APIs are used to access and manipulate data using a 
+                        common set of stateless operations. These operations are integral to the HTTP 
+                        protocol and represent essential create, read, update, and delete (CRUD) functionality,
+                         although not in a clean one-to-one manner:
+                         <ul>
+                          <li><code>GET</code> (retrieve an index of resources or an individual resource)</li>
+                          <li><code>POST</code> (create a resource or generally provide data)</li>
+                          <li><code>PUT</code> (create or replace a resource)</li>
+                          <li><code>PATCH</code> (update/modify a resource)</li>
+                          <li><code>DELETE</code> (remove a resource)</li>
+                        </ul>
+                      </p>
+                      <p>Using these HTTP methods and a resource name(noun) as an address, we can 
+                        build a REST API by creating an endpoint for each operation. And by
+                         implementing the pattern, we will have a stable and easily understandable 
+                         foundation enabling us to evolve the code rapidly and maintain it afterwards.
+                      </p>
+                  </div>
+                  <div class="clearfix content-heading">
+                    <h2>Designing a REST API</h2>
+                    <img class="pull-right" src="images/api-design.png" height="300px" width="700px"/>
+                    
+                    <p>A good practice when designing a REST API is to create a list or table with HTTP methods and endpoints like below:
+                       <ul>
+                        <li><code>GET</code> on the endpoint <code>/courses</code> (list all courses)</li>
+                        <li><code>GET</code> on the endpoint <code>/courses/:coursesId</code> (get a specific course by id)</li>
+                        <li><code>POST</code> on the endpoint <code>/courses</code> (create a new course)</li>
+                        <li><code>PATCH</code> on the endpoint <code>/courses/:coursesId</code> (update the data for a specific course by id)</li>
+                        <li><code>DELETE</code> on the endpoint <code>/courses/:coursesId</code> (delete a specific course by id)</li>
+                      </ul>
+                    </p>
+                    <p>We are now ready to start implementing that in code.
+                    </p>
+                </div>
+                  </div>
+                </div>
+              </div>
+              <h4 id="divider" class="divider divider2 line one-line">End of section</h4>
+              <ul class="pager">
+                <li class="previous"><a class="effect effect-3 go-to-node-modules" href="/node-modules">Previous</a></li>
+                <li class="top"><button class="effect" onclick="topFunction()">Top of page</button></li>
+                <li class="next"><a class="effect effect-3 go-to-express" href="/express">Next</a></li>
+              </ul>
+          </div>
+          
+        </div>
+      </div>
+    <my-footer></my-footer>
+
+</body>
+</html>
